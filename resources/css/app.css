@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-primary {
+    @apply bg-btn-1 hover:bg-btn-2 rounded
+}
+
+.btn-primary:disabled{
+    @apply bg-blue-2
+}
+
+.btn-submit {
+    @apply bg-submit-1 hover:bg-submit-2 text-white rounded shadow-md
+}  
+
+.btn-success {
+    @apply bg-success-1 hover:bg-success-2 text-white rounded shadow-md
+} 
+
+.btn-warning {
+    @apply bg-warning-1 hover:bg-warning-2 text-black rounded shadow-md
+}
+
+.btn-danger {
+    @apply bg-danger-1 hover:bg-danger-2 text-white rounded shadow-md
+}
+
+.text-input {
+    @apply bg-white text-black border border-light-3 rounded focus:border-light-3 focus:ring-0    
+}
+
+.text-input:disabled {
+    @apply bg-blue-1 border border-blue-1
+}
+
+.tags-input {
+    @apply bg-primary text-white flex items-center flex-wrap rounded-sm p-1
+}
+
+.tag-item {
+    @apply w-fit bg-primary text-white rounded-md text-sm px-1 flex items-center
+}
+
+.table-header {
+    @apply bg-tertiary text-white border-b border-light-3
+}
