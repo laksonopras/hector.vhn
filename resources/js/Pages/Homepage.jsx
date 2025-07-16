@@ -69,7 +69,7 @@ export default function Homepage(){
                 </div>
             </div>
             
-            <div className="w-full h-fit p-5 bg-white space-y-5 lg:p-24 md:flex md:items-center md:justify-center md:space-x-5 lg:space-x-10 ">
+            <div className="w-full h-fit p-5 space-y-5 bg-white md:flex md:items-center md:space-x-12 md:space-y-0 lg:py-12 lg:px-36">
                 <div className="md:w-1/2 overflow-hidden">
                     <img src="/assets/Ilustration-4.jpeg" alt="" className="w-full scale hover:scale-125 duration-500 hover:-rotate-6" />
                 </div>
@@ -79,34 +79,31 @@ export default function Homepage(){
                 </div>
             </div>
 
-            <div className="w-full h-fit p-5 sm:px-24 sm:py-12 space-y-5 sm:space-y-12 bg-light-1 ">
-                <div className="w-fit mx-auto space-y-2 text-center">
-                    <p className="w-fit mx-auto text-3xl font-medium border-b pb-5 px-10 border-light-4">Produk Layanan Kami</p>
+            <div className="w-full h-fit p-5 space-y-5 bg-light-1 xl:px-36 md:py-12 md:space-y-12  ">
+                <div className="text-center space-y-3">
+                    <p className="w-fit mx-auto px-10 text-3xl font-medium border-b pb-5 border-light-4">Produk Layanan Kami</p>
                     <p className="text-lg">Kami menyediakan semua yang Anda butuhkan untuk menunjang perawatan sepatu Anda.</p>
                 </div>
-                <div className="w-full h-content md:flex md:items-stretch md:justify-center space-y-5 md:space-y-0 md:space-x-7">
+                <div className="w-full h-fit space-y-5 sm:grid sm:grid-cols-2 xl:grid-cols-4 sm:space-y-0 sm:gap-5">
                     {
-                        products.map((produk, index) => {
+                        products.map((product, index) => {
                             return(
-                                <div key={index} className="md:w-1/4 self-auto overflow-hidden bg-white rounded-lg shadow-xl border border-light-3 hover:-translate-y-2 duration-500">
-                                    <div className="w-full h-auto overflow-hidden">
-                                        <img src={produk.img} alt=""/>
+                                <div key={index} className="bg-white self-auto overflow-hidden rounded-lg shadow-xl border border-light-3 hover:-translate-y-2 duration-500">
+                                    <div>
+                                        <img src={product.img} alt=""/>
                                     </div>
-                                    <div className="p-5 md:py-10 md:px-5 space-y-2 md:space-y-5">
-                                        <p className="text-center text-2xl font-semibold">{produk.title}</p>
-                                        <p className="text-center text-light-4 leading">{produk.desc}</p>
+                                    <div className="p-5 text-center">
+                                        <p className="text-xl font-medium">{product.title}</p>
+                                        <p className="">{product.desc}</p>
                                     </div>
                                 </div>
                             )
                         })
                     }
                 </div>
-                <div className="w-full flex justify-center">
-                    <button className="bg-primary rounded-lg px-7 py-5 shadow-xl hover:scale-105 ease-in-out duration-200 ">Lihat Daftar Harga</button>
-                </div>
             </div>
 
-            <div className="w-full h-fit p-5 sm:px-24 sm:py-12 space-y-5 sm:space-y-12 bg-white">
+            <div className="w-full h-fit p-5 sm:px-36 sm:py-12 space-y-5 sm:space-y-12 bg-white">
                 <h1 className="w-fit mx-auto text-3xl font-medium border-b pb-5 px-10 border-light-4">Mengapa kami?</h1>
                 <div className="w-full h-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {
